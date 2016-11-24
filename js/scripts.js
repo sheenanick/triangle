@@ -1,5 +1,4 @@
 var triangleTracker = function(a, b, c) {
-
   if( (a + b > c) && (a + c > b) && (b + c > a)) {
     if((a === b) && (a === c)) {
       return "equilateral";
@@ -16,16 +15,14 @@ var triangleTracker = function(a, b, c) {
 $(document).ready(function() {
   $("form").submit(function(event) {
     $('#result').show();
-  
+
     var a = parseInt( $('input#sideA').val() );
     var b = parseInt( $('input#sideB').val() );
     var c = parseInt( $('input#sideC').val() );
-
     var triangle = triangleTracker(a, b, c);
     var sides = [a,b,c].join(',');
 
     $('.do_not').text('');
-
     $('.sides').text(sides);
 
     if(triangle !== "false") {
@@ -34,7 +31,6 @@ $(document).ready(function() {
       $('.type').text('');
       $('.do_not').text("do not");
     }
-
   event.preventDefault();
   });
 });
