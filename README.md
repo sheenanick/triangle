@@ -1,4 +1,4 @@
-# Triangle
+# Triangle Checker
 
 #### 08.11.2016
 
